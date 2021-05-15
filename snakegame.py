@@ -66,7 +66,7 @@ class Snakegame:
             #move body
             self.snake.move()
 
-            #touch the food(f)
+            #touch the food
             if abs(self.food.foodx-self.snake.head[0]) < 12 and abs(self.food.foody-self.snake.head[1]) < 12:
                 #refresh the position
                 self.food.refresh_position()
@@ -76,7 +76,7 @@ class Snakegame:
                 #grow up
                 self.snake.extend()
 
-            #game_over(s)
+            #game_over
             if self.snake.head[0] > 500 or self.snake.head[1] > 500 or self.snake.head[0] < 0 or self.snake.head[1] < 0:
                 self.game_on = False
             for i in self.snake.segements[1:]:
